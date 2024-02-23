@@ -1,9 +1,9 @@
 const fs = require('fs');
 
-fs.access('./monDossier', (err) => {
+fs.access('./myFolfer', (err) => {
     if (err) {
         // Le dossier n'existe pas, donc on le crée
-        fs.mkdir('./monDossier', (err) => {
+        fs.mkdir('./myFolfer', (err) => {
             if (err) {
                 console.log(`Erreur lors de la création du dossier : ${err}`);
             } else {
@@ -12,7 +12,7 @@ fs.access('./monDossier', (err) => {
         });
     } else {
         // Le dossier existe déjà, donc on le supprime
-        fs.rmdir('./monDossier', (err) => {
+        fs.rmdir('./myFolfer', (err) => {
             if (err) {
                 console.log(`Erreur lors de la suppression du dossier : ${err}`);
             } else {
